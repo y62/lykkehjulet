@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">s184618 Lykkehjulet</string>
+    <string name="spin">Spin</string>
+    <string name="guess_the_word">Guess the Word</string>
+    <string name="enter">enter</string>
+    <string name="restart">restart</string>
+</resources>
