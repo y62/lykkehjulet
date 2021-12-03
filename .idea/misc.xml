@@ -4,6 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/blank_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment4.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment_game.xml" value="0.33" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment_game_2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment_game_rules.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/fragment_result.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/y62/AndroidStudioProjects/spintask/app/src/main/res/layout/game.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
@@ -12,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.36666666666666664" />
+      </ProjectState>
+    </option>
   </component>
 </project>

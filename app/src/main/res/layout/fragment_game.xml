@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/guess_the_word"
+        android:layout_width="176dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:gravity="center"
+        android:hint="@string/guess_the_word"
+        android:importantForAutofill="no"
+        android:inputType="text|textNoSuggestions"
+        android:textColorHint="#757575"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/spinResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:textSize="20sp"
+        tools:text="Category" />
+
+    <Button
+        android:id="@+id/spinButton"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="187dp"
+        android:text="@string/spin" />
+
+    <TextView
+        android:id="@+id/guessResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="22dp"
+        android:textSize="24sp"
+        tools:text="Guess Result" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="@string/enter" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/lives"
+        android:text="1000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toEndOf="@+id/guessResult"
+        tools:text="Points" />
+
+    <TextView
+        android:id="@+id/lives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="48dp"
+        android:text="5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guessResult"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lives" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/guess_the_word"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/guess_the_word"
+        app:layout_constraintTop_toBottomOf="@+id/guessResult"
+        tools:text="category" />
+
+</RelativeLayout>
