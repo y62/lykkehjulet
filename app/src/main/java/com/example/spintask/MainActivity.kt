@@ -34,11 +34,11 @@ class MainActivity : AppCompatActivity() {
         binding.playBtn.setOnClickListener {
             replaceFragment(Game())
         }
-/*
-        binding.button3.setOnClickListener {
-            replaceFragment(GameRules())
+
+        binding.rulesBnt.setOnClickListener {
+            replaceFragment(Rules())
         }
-*/
+
 
     }
 

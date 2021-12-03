@@ -10,6 +10,25 @@ import com.example.spintask.databinding.FragmentGameBinding
 class Game : Fragment(R.layout.fragment_game) {
     private var _binding : FragmentGameBinding? = null
     private val binding get () = _binding!!
+    val cars = arrayOf("bmw", "mercedes", "toyota", "ferrari", "peugeot", "nissan", "tesla", "ford" )
+    val countries = arrayOf("japan", "china", "canada", "brazil", "venezuela", "egypt", "australia", "denmark" )
+    val cities = arrayOf("copenhagen", "sydney", "moscow", "delhi", "kyoto", "phoenix", "berlin", "paris", "bucharest" )
+    val animals = arrayOf("elephant", "leopard", "cheetah", "crocodile", "horse", "donkey", "rabbit", "squirrel" )
+    val brands = arrayOf("adidas", "gucci", "pringles", "pepsi", "microsoft", "visa", "nivea", "lacoste", "starbucks" )
+    val celebrities = arrayOf("madonna", "trump", "drake", "rihanna", "eminem", "putin", "undertaker" )
+    val finalResultMsg = arrayOf("YOU WIN!", "YOU LOSE!")
+    val categories = arrayOf(cars, countries, cities, animals, brands, celebrities)
+    val categoryNames = arrayOf("car", "country", "city", "animal", "brand", "celebrity")
+    val categoryRandomizer = (0..5).random()
+    val randomCategory = categories[categoryRandomizer]
+    val randomCategoryWord = randomCategory[(0..randomCategory.lastIndex).random()]
+    val questionMarks = mutableListOf<String>()
+    val letters = mutableListOf<String>()
+    var word: String = ""
+    var tempWord: String = ""
+    var questionWord: String = ""
+    var tempQuestionWord: String = ""
+    var questionMarkSigns: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +60,9 @@ class Game : Fragment(R.layout.fragment_game) {
             if (spinResult[numbers] == spinResult[3]) {
                 life += 1
             }
+            if (life <= 0) {
+            binding.finalResult.text = finalResultMsg[1].toString()
+            }
        /*     if (life <= 0) {
                 val toast = Toast.makeText(this,"GAME OVER!", Toast.LENGTH_SHORT)
                 toast.show()
@@ -50,25 +72,6 @@ class Game : Fragment(R.layout.fragment_game) {
             binding.points.text = point.toString()
         }
 
-        //_______________________________________________________________________________
-        val cars = arrayOf("bmw", "mercedes", "toyota", "ferrari", "peugeot", "nissan", "tesla", "ford" )
-        val countries = arrayOf("japan", "china", "canada", "brazil", "venezuela", "egypt", "australia", "denmark" )
-        val cities = arrayOf("copenhagen", "sydney", "moscow", "delhi", "kyoto", "phoenix", "berlin", "paris", "bucharest" )
-        val animals = arrayOf("elephant", "leopard", "cheetah", "crocodile", "horse", "donkey", "rabbit", "squirrel" )
-        val brands = arrayOf("adidas", "gucci", "pringles", "pepsi", "microsoft", "visa", "nivea", "lacoste", "starbucks" )
-        val celebrities = arrayOf("madonna", "trump", "drake", "rihanna", "eminem", "putin", "undertaker" )
-        val categories = arrayOf(cars, countries, cities, animals, brands, celebrities)
-        val categoryNames = arrayOf("cars", "countries", "cities", "animals", "brands", "celebrities")
-        val categoryRandomizer = (0..5).random()
-        val randomCategory = categories[categoryRandomizer]
-        val randomCategoryWord = randomCategory[(0..randomCategory.lastIndex).random()]
-        val questionMarks = mutableListOf<String>()
-        val letters = mutableListOf<String>()
-        var word: String = ""
-        var tempWord: String = ""
-        var questionWord: String = ""
-        var tempQuestionWord: String = ""
-        var questionMarkSigns: String = ""
         println("Category " +  categoryNames[categoryRandomizer])
         binding.category.text = categoryNames[categoryRandomizer].toString()
 
@@ -108,6 +111,13 @@ class Game : Fragment(R.layout.fragment_game) {
             binding.guessResult.text = questionWord.toString()
             binding.lives.text = life.toString()
 
+            if (questionWord == word && life >= 0) {
+                binding.finalResult.text = finalResultMsg[0].toString()
+            }
+            if (life <= 0) {
+                binding.finalResult.text = finalResultMsg[1].toString()
+            }
+
           /*  if (questionWord == word) {
                 val toast = Toast.makeText(this,"YOU WIN!", Toast.LENGTH_SHORT)
                 toast.show()
@@ -121,8 +131,6 @@ class Game : Fragment(R.layout.fragment_game) {
             //  binding.guessResult.text = binding.guessTheWord.text.toString()
             // binding.guessResult.text = cars[1].toString()
         }
-
-
 
     }
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="349dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="663dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="39dp"
+        tools:itemCount="8"
+        tools:listitem="@layout/recycler_view_item" />
+
+    <TextView
+        android:id="@+id/gameRules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="29dp"
+        android:text="GAME RULES"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/gameRulesText"
+        android:layout_width="305dp"
+        android:layout_height="457dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="100dp"
+        android:text='Press play and start the game! Enter a letter in the inputfield with the help of keyboard and press enter. If you fail, you will lose a "life". You start with 5 lives and 1000 gold. Spin as much as you want, but it can be costly! Try it out and press play!' />
+</RelativeLayout>
